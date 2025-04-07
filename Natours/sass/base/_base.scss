@@ -1,0 +1,20 @@
+//basic definition - *, html, body
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 1rem = 10px */
+  /* (10/16)*100 = 62.5% */
+  //this defines what 1rem is
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
