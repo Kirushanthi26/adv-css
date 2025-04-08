@@ -5,8 +5,6 @@
   height: 50rem;
 
   &__side {
-    background-color: red;
-    color: #fff;
     font-size: 2rem;
     height: 50rem;
     transition: all 0.8s ease;
@@ -15,22 +13,67 @@
     left: 0;
     width: 100%;
     backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &--front {
-      background-color: yellow;
+      background-color: $color-white;
     }
 
     &--back {
-      background-color: greenyellow;
       transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
     }
   }
 
   &:hover &__side--front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 
   &:hover &__side--back {
     transform: rotateY(0);
+  }
+
+  //frontside styling
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+
+    &--1 {
+      background-image: url(../img/nat-5.jpg);
+    }
+    &--2 {
+      background-image: url(../img/nat-6.jpg);
+    }
+    &--3 {
+      background-image: url(../img/nat-7.jpg);
+    }
+  }
+
+  &__heading {
+  }
+
+  &__details {
   }
 }
