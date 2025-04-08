@@ -2,10 +2,10 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem;
+  height: 52rem;
 
   &__side {
-    height: 50rem;
+    height: 52rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -130,16 +130,20 @@
   }
 
   &__details {
-    text-align: center;
-    font-size: $default-font-size;
-
+    padding: 3rem;
     ul {
-      padding: 5rem;
-      text-decoration: none;
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
 
       li {
-        border-bottom: 1px solid gray;
-        padding-bottom: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
       }
     }
   }
